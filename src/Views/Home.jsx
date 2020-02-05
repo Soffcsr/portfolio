@@ -2,7 +2,11 @@ import React from 'react'
 
 const Home = props =>{
     return(
-        <h1>Home</h1>   
+        <section id="homeSection">
+            <img src="../img/foto.jpeg" alt=""/>
+            <h1>Sofía Ruiz</h1>
+            <h3>Web Developer</h3>
+        </section>   
     )
 }
 
