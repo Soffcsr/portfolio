@@ -5,14 +5,13 @@ import Contact from "./Views/Contact";
 import Home from "./Views/Home";
 import Profile from "./Views/Profile";
 import Skills from "./Views/Skills";
-import Footer from "./Components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App m-md-4">
       <Router>
-        <Navbar />
+        <Navbar/>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -27,7 +26,6 @@ function App() {
             <Contact />
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </div>
   );
