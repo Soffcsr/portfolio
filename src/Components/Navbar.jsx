@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { animated, useTrail } from 'react-spring'
 
 const Navbar = props => {
@@ -14,16 +13,16 @@ const Navbar = props => {
       <nav className="d-none d-md-block">
         <ul className="d-flex flex-row flex-md-column justify-content-center justify-content-md-end">
           <animated.li style={trails[0]}>
-            <Link to="/">HOME</Link>
+            <a href>HOME</a>
           </animated.li>
           <animated.li style={trails[1]}>
-            <Link to="/Profile">PROFILE</Link>
+            <a href>PROFILE</a>
           </animated.li>
           <animated.li style={trails[2]}>
-            <Link to="/Skills">MY SKILLS</Link>
+            <a href>MY SKILLS</a>
           </animated.li>
           <animated.li style={trails[3]}>
-            <Link to="/Contact">CONTACT</Link>
+            <a href>CONTACT</a>
           </animated.li>
         </ul>
       </nav>

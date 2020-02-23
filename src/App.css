@@ -1,16 +1,14 @@
 .App {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
   /* margin: 25px; */
 }
 
 body {
   background-color: black;
-  background-image: url('./img/fondo.jpg');
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; */
 }
 
 header{
@@ -42,8 +40,8 @@ nav ul li {
 }
 
 nav ul li a {
-  font-family: 'Sansita', sans-serif;
-  -webkit-text-stroke: 1px white;
+  font-family: 'Public Sans';
+  -webkit-text-stroke: 1.5px white;
   font-size: 70px;
   text-decoration: none;
   color: transparent;
@@ -57,57 +55,67 @@ nav ul li:hover a{
 
 #homeSection {
   text-align: center;
-  text-shadow: 3px 3px 3px grey;
+  /* text-shadow: 3px 3px 3px grey; */
   padding-top: 100px;
   padding-bottom: 100px;
-  height: 600px;
+  height: 650px;
   position: sticky;
   top: 0;
 }
 
-
-
-#homeSection h1 {
-  font-family: "Caveat", cursive;
-  font-size: 100px;
-  padding-top: 5%;
-  color: white;
+#homeSection div#form1 {
+  background-color: white;
+  border: black solid;
+  z-index: 99;
 }
 
-#homeSection h3 {
-  font-family: "Courier Prime", monospace;
+#homeSection div#form2 {
+  background-color: black;
+  border: white solid;
+  margin-left: 1.5%;
+  margin-top: -1.5%;
+  z-index: 98;
+}
+
+#homeSection div#form1, #homeSection div#form2{
+  height: 400px;
+  position: absolute;
+  width: 400px;
+}
+
+#homeSection h1 {
+  font-family: 'Archivo Black';
+  font-size: 100px;
+  position: absolute;
+  color: black;
+  margin-left: 5%;
+  margin-top: 10%;
+  -webkit-text-stroke: 1px white;
+  z-index: 100;
+}
+
+#profileSection h1{
+  color: black;
+  -webkit-text-stroke: 1px white;
+  font-size: 500px;
+  margin-top: -100px;
+  z-index: 99;
+}
+
+#profileSection h2{
+  font-size: 50px;
   color: white;
+  margin-top: 250px;
+  margin-left: 250px;
+  z-index: 100;
+}
+
+#profileSection h1, #profileSection h2{
+  font-family: 'Archivo Black';
+  position: absolute;
 }
 
 ul li:hover a {
   color: white;
 }
 
-footer {
-  background-color: black;
-  color: white;
-  margin: 0;
-  height: 400px;
-  width: 100%;
-}
-
-footer div {
-  margin: 10px;
-}
-
-footer div i{
-  font-size: 60px;
-  margin: 15px;
-}
-
-footer form input, footer form textarea{
-  width: 250px;
-}
-
-footer form input{
-  height: 50px;
-}
-
-footer form textarea{
-  height: 180px;
-}
