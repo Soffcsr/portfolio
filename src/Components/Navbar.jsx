@@ -1,5 +1,6 @@
 import React from "react";
 import { animated, useTrail } from 'react-spring'
+import animateScrollTo from 'animated-scroll-to';
 
 const Navbar = props => {
 
@@ -8,21 +9,40 @@ const Navbar = props => {
     from: {opacity: 0, transform: 'translate3d(0px, 0, 0)'}
   })
 
+  const handleOnClick = (e) =>{
+    switch(e.target.id){
+      case "profile":
+        animateScrollTo(600)
+        break;
+      case "skills":
+        animateScrollTo(1200)
+        break;
+      case "work":
+        animateScrollTo(1800)
+        break;
+      case "contact":
+        animateScrollTo(2400)
+        break;
+      default:
+        break;
+    }
+  }
+
   return (
     <div>
       <nav className="d-none d-md-block">
         <ul className="d-flex flex-row flex-md-column justify-content-center justify-content-md-end">
           <animated.li style={trails[0]}>
-            <a href>HOME</a>
+            <a id="profile" onClick={handleOnClick} href>PROFILE</a>
           </animated.li>
           <animated.li style={trails[1]}>
-            <a href>PROFILE</a>
+            <a id="skills" onClick={handleOnClick} href>MY SKILLS</a>
           </animated.li>
           <animated.li style={trails[2]}>
-            <a href>MY SKILLS</a>
+            <a id="work" onClick={handleOnClick} href>MY WORK</a>
           </animated.li>
           <animated.li style={trails[3]}>
-            <a href>CONTACT</a>
+            <a id="contact" onClick={handleOnClick} href>CONTACT</a>
           </animated.li>
         </ul>
       </nav>

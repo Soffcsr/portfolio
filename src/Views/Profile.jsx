@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import { animated, useTrail } from 'react-spring'
 
 const Profile = props => {

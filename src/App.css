@@ -45,6 +45,7 @@ nav ul li a {
   font-size: 70px;
   text-decoration: none;
   color: transparent;
+  cursor: default;
 }
 
 nav ul li:hover a{
@@ -55,12 +56,15 @@ nav ul li:hover a{
 
 #homeSection {
   text-align: center;
-  /* text-shadow: 3px 3px 3px grey; */
   padding-top: 100px;
   padding-bottom: 100px;
+  /* text-shadow: 3px 3px 3px grey; */
+  /* position: sticky;
+  top: 0; */
+}
+
+#skillsSection, #homeSection, #profileSection{
   height: 650px;
-  position: sticky;
-  top: 0;
 }
 
 #homeSection div#form1 {
@@ -71,7 +75,7 @@ nav ul li:hover a{
 
 #homeSection div#form2 {
   background-color: black;
-  border: white solid;
+  border: white solid 0.5px;
   margin-left: 1.5%;
   margin-top: -1.5%;
   z-index: 98;
@@ -99,6 +103,15 @@ nav ul li:hover a{
   -webkit-text-stroke: 1px white;
   font-size: 500px;
   margin-top: -100px;
+  margin-left: 50px;
+  z-index: 99;
+}
+
+#skillsSection h1{
+  color: grey;
+  /* -webkit-text-stroke: 1px white; */
+  font-size: 150px;
+  margin-left: 20%;
   z-index: 99;
 }
 
@@ -110,7 +123,9 @@ nav ul li:hover a{
   z-index: 100;
 }
 
-#profileSection h1, #profileSection h2{
+#profileSection h1, #profileSection h2,
+#skillsSection h1, #skillsSection h2
+{
   font-family: 'Archivo Black';
   position: absolute;
 }
