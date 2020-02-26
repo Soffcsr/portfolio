@@ -44,7 +44,7 @@ nav ul li a {
   -webkit-text-stroke: 1.5px white;
   font-size: 70px;
   text-decoration: none;
-  color: transparent;
+  color: black;
   cursor: default;
 }
 
@@ -63,7 +63,7 @@ nav ul li:hover a{
   top: 0; */
 }
 
-#skillsSection, #homeSection, #profileSection{
+#skillsSection, #homeSection, #profileSection, #workSection, #contactSection{
   height: 650px;
 }
 
@@ -98,12 +98,12 @@ nav ul li:hover a{
   z-index: 100;
 }
 
-#profileSection h1{
+#profileSection h1, #workSection h1{
   color: black;
   -webkit-text-stroke: 1px white;
   font-size: 500px;
   margin-top: -100px;
-  margin-left: 50px;
+  margin-left: 3%;
   z-index: 99;
 }
 
@@ -115,7 +115,7 @@ nav ul li:hover a{
   z-index: 99;
 }
 
-#profileSection h2{
+#profileSection h2, #workSection h2{
   font-size: 50px;
   color: white;
   margin-top: 250px;
@@ -124,10 +124,27 @@ nav ul li:hover a{
 }
 
 #profileSection h1, #profileSection h2,
-#skillsSection h1, #skillsSection h2
+#skillsSection h1, #skillsSection h2,
+#workSection h1, #workSection h2
 {
   font-family: 'Archivo Black';
   position: absolute;
+}
+
+#contactSection h1{
+  font-family: 'Archivo Black';
+  font-size: 100px;
+  position: absolute;
+  right: 3%;
+}
+
+#contactSection h1.bold{
+  color: black;
+  -webkit-text-stroke: 1px white;
+}
+
+#contactSection h1.no-bold{
+  color: white;
 }
 
 ul li:hover a {

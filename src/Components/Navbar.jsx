@@ -12,16 +12,16 @@ const Navbar = props => {
   const handleOnClick = (e) =>{
     switch(e.target.id){
       case "profile":
-        animateScrollTo(600)
+        animateScrollTo(650)
         break;
       case "skills":
-        animateScrollTo(1200)
+        animateScrollTo(1300)
         break;
       case "work":
-        animateScrollTo(1800)
+        animateScrollTo(1950)
         break;
       case "contact":
-        animateScrollTo(2400)
+        animateScrollTo(2600)
         break;
       default:
         break;

@@ -5,6 +5,7 @@ import Contact from "./Views/Contact";
 import Home from "./Views/Home";
 import Profile from "./Views/Profile";
 import Skills from "./Views/Skills";
+import Work from "./Views/Work"
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Home />
       <Profile />
       <Skills />
-      {/* <Contact /> */}
+      <Work />
+      <Contact />
     </div>
   );
 }
