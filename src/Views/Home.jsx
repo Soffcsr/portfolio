@@ -9,16 +9,17 @@ const Home = props => {
   })
   
   const trailstitle = useTrail(1, {
-    to: {marginLeft: '15%', transform: 'translate(0, 50px)'},
-    from: {marginLeft: '15%', transform: 'translate(0, -400px)'}
+    to: {opacity: 1, transform: 'translate(0, 50px)'},
+    from: {opacity: 0, transform: 'translate(0, -400px)'}
   })
+
   return (
     <section id="homeSection">
-      <animated.div id="form1" style={trailsdiv[0]}>
+      <animated.div className="d-none d-md-flex" id="form1" style={trailsdiv[0]}>
       </animated.div>
-      <animated.div id="form2" style={trailsdiv[1]}>
+      <animated.div className="d-none d-md-flex" id="form2" style={trailsdiv[1]}>
       </animated.div>
-      <animated.h1 style={trailstitle[0]}>Sofía Ruiz.</animated.h1>
+      <animated.h1 className="ml-md-5 ml-0" style={trailstitle[0]}>{props.name} {props.lastname}</animated.h1>
     </section>
   );
 };

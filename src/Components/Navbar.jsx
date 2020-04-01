@@ -29,11 +29,11 @@ const Navbar = props => {
   }
 
   return (
-    <div>
-      <nav className="d-none d-md-block">
-        <ul className="d-flex flex-row flex-md-column justify-content-center justify-content-md-end">
+    <div className="mt-md-0" id="navbar">
+      <nav className="d-none d-md-flex position-absolute nav">
+        <ul className="d-flex flex-column justify-content-end justify-content-md-end text-left text-md-right">
           <animated.li style={trails[0]}>
-            <a id="profile" onClick={handleOnClick} href>PROFILE</a>
+            <a id="profile" onClick={handleOnClick} href>ABOUT ME</a>
           </animated.li>
           <animated.li style={trails[1]}>
             <a id="skills" onClick={handleOnClick} href>MY SKILLS</a>

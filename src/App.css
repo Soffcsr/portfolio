@@ -23,44 +23,41 @@ header div{
   padding-top: 7px;
 }
 
-nav {
-  position: absolute;
+.nav {
   z-index: 1000;
   right: 15px;
 }
 
-nav ul {
+.nav ul{
   list-style: none;
   padding: 0px;
   text-align: right;
 }
 
-nav ul li {
+.nav ul li{
   margin-top: 40px;
 }
 
-nav ul li a {
+.nav ul li a {
   font-family: 'Public Sans';
   -webkit-text-stroke: 1.5px white;
-  font-size: 70px;
+  -webkit-text-fill-color: transparent;
+  font-size: 10vh;
   text-decoration: none;
-  color: black;
+ background-color: transparent; 
   cursor: default;
 }
 
-nav ul li:hover a{
+.nav ul li:hover a{
   text-decoration: none;
+  -webkit-text-fill-color: white;
   color: white;
-  letter-spacing: 5px;
 }
 
 #homeSection {
   text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  /* text-shadow: 3px 3px 3px grey; */
-  /* position: sticky;
-  top: 0; */
 }
 
 #skillsSection, #homeSection, #profileSection, #workSection, #contactSection{
@@ -98,56 +95,401 @@ nav ul li:hover a{
   z-index: 100;
 }
 
-#profileSection h1, #workSection h1{
+#workSection h1{
   color: black;
   -webkit-text-stroke: 1px white;
-  font-size: 500px;
-  margin-top: -100px;
-  margin-left: 3%;
+  font-size: 45vw;
+  margin-top: -10vw;
+  margin-left: 2%;
   z-index: 99;
 }
 
 #skillsSection h1{
-  color: grey;
-  /* -webkit-text-stroke: 1px white; */
-  font-size: 150px;
+  color: #262626;
+  font-size: 10vw;
   margin-left: 20%;
   z-index: 99;
 }
 
-#profileSection h2, #workSection h2{
-  font-size: 50px;
+#workSection h2{
+  font-size: 5vw;
   color: white;
-  margin-top: 250px;
-  margin-left: 250px;
+  margin-top: 15%;
+  margin-left: 27%;
   z-index: 100;
 }
 
+#profileSection h1{
+  color: black;
+  -webkit-text-stroke: 1px grey;
+  opacity: 0.5;
+  font-size: 45vw;
+  margin-top: -10vw;
+  right: 20%;
+  z-index: 99;
+}
+@media (max-width: 576px) { 
+  #profileSection h1{
+    right: 25%;
+  }
+  .triangle-container{
+    width: 110px;
+    text-align: center;
+    margin-right: -10%;
+  }
+  .triangle-container:first-child{
+    margin-left: -8%;
+  }
+}
+#profileSection h2{
+  color: white;
+  margin-top: -30vw;
+  margin-left: 25%;
+  font-size: 5vw;
+  font-family: 'Archivo Black';
+  z-index: 100;
+}
+
+#profileSection .about{
+  font-family: 'Work Sans', sans-serif;
+}
+
 #profileSection h1, #profileSection h2,
-#skillsSection h1, #skillsSection h2,
-#workSection h1, #workSection h2
+#skillsSection h1, #skillsSection h2{
+  position: relative;
+}
+
+/* #contactSection div.bg-white{
+  bottom: 0;
+  z-index: 110;
+} */
+
+#contactSection{
+  position: relative;
+}
+
+#contactSection div.bg-grey, #contactSection div.bg-grey-t{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+#contactSection div.bg-grey{
+  background-color: #262626;
+}
+
+#workSection h1, #workSection h2,
+#skillsSection h1, #skillsSection h2
 {
   font-family: 'Archivo Black';
   position: absolute;
 }
 
+#skillsSection .icon{
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+}
+
+.icon div{
+  width: 150px;
+  height: 150px;
+  top: -140px;
+  position: relative;
+}
+
+
+#skillsSection .icon img{
+  display: block;
+  margin: 3vh auto;
+}
+
+div.icon{
+  border-radius: 75px;
+}
+
+.skills{
+  margin-top: 100px;
+}
+
+@media (min-width: 576px) { 
+  .triangle-container{
+    width: 210px;
+    text-align: center;
+    margin-right: -5%;
+  } 
+}
+
+.triangle-container .triangle{
+  fill: transparent;
+  stroke: white;
+  stroke-width: 4;
+}
+
+/* #skillsSection .triangle-1,
+#skillsSection .triangle-2{
+  margin-right: -5%;
+  width: 200px;
+  height: 200px;
+  background-color: #262626;
+}
+
+#skillsSection .triangle-1{
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+#skillsSection .triangle-2{
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+} */
+
 #contactSection h1{
   font-family: 'Archivo Black';
-  font-size: 100px;
+  font-size: 10vw;
   position: absolute;
-  right: 3%;
 }
 
 #contactSection h1.bold{
-  color: black;
+  color: transparent;
   -webkit-text-stroke: 1px white;
+  margin-left: 40%;
+  margin-top: 4%;
+}
+
+#contactSection form input, #contactSection form textarea{
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  background-color: transparent;
+  border-radius: 0%;
+}
+
+#contactSection form label, #contactSection div.bg-grey h2{
+  font-family: 'Archivo Black';
+  color: white;
+}
+
+#contactSection form button{
+  background-color: transparent;
+  border-color: white;
+  border: 2px solid white;
+  color: white;
+  border-radius: 0%;
+}
+
+#contactSection div.bg-grey h2{
+  font-size: 10vh;
+}
+
+#contactSection div.bg-grey-t{
+  opacity: 0.5;
+  background-color: grey;
+}
+
+#contactSection i{
+  color: black;
+  font-size: 5vw;
+  margin: 3%;
+}
+
+#contactSection div.bg-grey-t div.w-100 i{
+  font-size: 15vw;
 }
 
 #contactSection h1.no-bold{
   color: white;
+  margin-top: 1%;
 }
 
 ul li:hover a {
   color: white;
 }
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 40%;
+  left: 0;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  z-index: 9999;
+}
+
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 45%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.25s ease;
+}
+
+.button_container:hover {
+  opacity: 0.7;
+}
+
+.button_container.active{
+  right: 5%;
+}
+
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #fff;
+}
+
+.button_container.active .middle {
+  opacity: 0;
+  background: #fff;
+}
+
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #fff;
+}
+
+.button_container span {
+  background: white;
+  border: none;
+  border-radius: 2px;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+	background: black;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+	overflow: hidden;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
+}
+
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.45s;
+}
+
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.5s;
+}
+
+.overlay nav {
+  position: relative;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5vh;
+  font-family: 'Public Sans';
+  font-weight: 400;
+  text-align: center;
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+}
+
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 100%;
+}
+
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: white;
+  transition: 0.35s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+ }
+  100% {
+    opacity: 1;
+    left: 0;
+ }
+}
+
+.hidden{
+  display: none;
+}
+
+.visible{
+  display: flex;
+}
+
+.bg, .meter {
+  fill: none;
+  stroke-width: 5px;
+  stroke-miterlimit: round;
+}
+.meter {
+  transition: stroke-dashoffset 850ms ease-in-out;
+  stroke-dasharray: 130; 
+  stroke-dashoffset: 130;
+}
+
+
 
